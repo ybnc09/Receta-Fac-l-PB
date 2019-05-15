@@ -1,2 +1,2 @@
-# Receta-Fac-l-PB
+# Receta-Facil-PB
 App de recetas culinarias
