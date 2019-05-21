@@ -1,4 +1,6 @@
-# Receta-Facil-PB
+# Receta-Facil-PB (https://raw.githubusercontent.com/SilenciodeLuna/Receta-Facil-PB/master/assets/logo-rf.jpg)
+
+ 
 App de recetas gastronómicas :books: la cual nos pernite descubrir el arte
 culinario. Encontrarás preparaciones para plato de entrada :sushi: , principal :spaghetti: y postre. :ice_cream:
 Serán recetas faciles y precisas para que puedas estar siempre preparad@. 
