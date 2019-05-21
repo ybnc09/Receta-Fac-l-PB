@@ -1,4 +1,4 @@
-# Receta-Facil-PB ![alt text](https://raw.githubusercontent.com/ybnc09/Receta-Facil-PB/master/blob/rf-logo.jpg)
+# Receta-Facil-PB (https://raw.githubusercontent.com/ybnc09/Receta-Facil-PB/master/rf-logo.jpg)
 
  
 App de recetas gastronómicas :books: la cual nos pernite descubrir el arte
