@@ -1,4 +1,4 @@
-# Receta-Facil-PB (https://raw.githubusercontent.com/SilenciodeLuna/Receta-Facil-PB/master/logo-rf.jpg)
+# Receta-Facil-PB (https://raw.githubusercontent.com/ybnc09/Receta-Facil-PB/master/logo-rf.jpg)
 
  
 App de recetas gastronómicas :books: la cual nos pernite descubrir el arte
