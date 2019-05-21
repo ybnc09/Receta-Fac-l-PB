@@ -1,6 +1,6 @@
 # Receta-Facil-PB
 App de recetas gastronómicas :books: la cual nos pernite descubrir el arte
-culinario. Encontrarás preparaciones para plato de entrada, principal y postre. :tongue:
+culinario. Encontrarás preparaciones para plato de entrada :sushi: , principal :spaghetti: y postre. :ice_cream:
 Serán recetas faciles y precisas para que puedas estar siempre preparad@. 
 
 -Paula Vargas :smiling_imp:
