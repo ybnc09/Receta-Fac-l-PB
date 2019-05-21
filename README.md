@@ -9,4 +9,7 @@ Serán recetas faciles y precisas para que puedas estar siempre preparad@.
 -Paula Vargas :smiling_imp:
 -Bryan Neris :penguin:
 
+
+
+![ionitron](https://github.com/ybnc09/Receta-Facil-PB/blob/master/logo-ionitron.png)
  
