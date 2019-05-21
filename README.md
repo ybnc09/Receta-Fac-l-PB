@@ -11,5 +11,5 @@ Serán recetas faciles y precisas para que puedas estar siempre preparad@.
 
 
 
-![ionitron](https://github.com/ybnc09/Receta-Facil-PB/blob/master/logo-ionitron.png)
+![github](https://github.com/ybnc09/Receta-Facil-PB/blob/master/github.png)
  
