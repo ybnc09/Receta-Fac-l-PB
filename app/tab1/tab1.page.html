@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar color="medium">
+    <ion-icon slot="start" name="logo-ionitron"></ion-icon>
+    <ion-title color="light">
+      Receta Fácil PB
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-img src="/assets/img/rf-logo.jpg"></ion-img>
+    <ion-card-header>
+      <ion-card-title>Bienvenidos a Receta Fácil PB</ion-card-title>
+      <ion-label text wrap color="danger">"La cocina es alquimia de amor"</ion-label>
+    </ion-card-header>
+    <ion-card-content>
+      Esta es una app que fué desarrollada con el fín de dar a
+      conocer recetas que te permitirán descubrir el arte
+      culinario. Encontrarás preparaciones para plato
+      de entrada, principal y postre.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-radio-group [(ngModel)]="categorias">
+      <ion-card-content>
+        <ion-card-header>
+          <ion-card-title>Categorías</ion-card-title>
+        </ion-card-header>
+      </ion-card-content>
+      <ion-item>
+        <ion-icon slot="start" color="success" name="leaf"></ion-icon>
+        <ion-label>Plato de Entrada</ion-label>
+        <ion-radio color="success" name="categorias" value="entrada"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" color="danger" name="pizza"></ion-icon>
+        <ion-label>Plato Principal</ion-label>
+        <ion-radio color="danger" name="categorias" value="principal"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" color="secondary" name="ice-cream"></ion-icon>
+        <ion-label>Postre</ion-label>
+        <ion-radio color="secondary" name="categorias" value="postre"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </ion-card>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-button size="small" shape="round" color="tertiary" (click)="categoria()">Acceder</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

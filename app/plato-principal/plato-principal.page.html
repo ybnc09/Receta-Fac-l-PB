@@ -1,0 +1,218 @@
+<ion-header>
+  <ion-toolbar color="medium">
+    <ion-icon slot="start" color="danger" name="pizza"></ion-icon>
+    <ion-title color="light">Plato Principal</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-img src="/assets/img/fondo.jpg"></ion-img>
+    <ion-card-content>
+      Consiste en el plato más contundente, complejo o elaborado
+      y sabroso, su composición es mucho más abundante que
+      la entrada ya que puede llevar carne, pescado y en algunas
+      ocasiones verduras.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>
+      <ion-card-header>
+        <ion-card-title>Ver recetas</ion-card-title>
+      </ion-card-header>
+    </ion-card-content>
+    <ion-item>
+      <ion-icon slot="start" color="dark" name="options"></ion-icon>
+      <ion-label>Carnes rojas</ion-label>
+      <ion-toggle color="tertiary" [(ngModel)]="carnesr" (ionChange)="verCarnesr()"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-icon slot="start" color="dark" name="options"></ion-icon>
+      <ion-label>Carnes blancas</ion-label>
+      <ion-toggle color="tertiary" [(ngModel)]="carnesb" (ionChange)="verCarnesb()"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-icon slot="start" color="dark" name="options"></ion-icon>
+      <ion-label>Verduras</ion-label>
+      <ion-toggle color="tertiary" [(ngModel)]="verduras" (ionChange)="verVerduras()"></ion-toggle>
+    </ion-item>
+  </ion-card>
+
+  <ion-card *ngIf="redmeats">
+    <ion-card-header>
+      <ion-card-title>Recetas</ion-card-title>
+      <ion-card-subtitle color="primary">Carnes rojas</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      Seleccione la receta que desea ver:
+    </ion-card-content>
+
+    <ion-item>
+      <ion-icon slot="start" name="book"></ion-icon>
+      <ion-label>Carne mechada</ion-label>
+      <ion-checkbox color="tertiary" [(ngModel)]="carnemechada" (ionChange)="verCarneMechada()"></ion-checkbox>
+    </ion-item>
+    <ion-card-content *ngIf="mechada">
+      <ion-card-subtitle>° INGREDIENTES:</ion-card-subtitle>
+      <ion-card-subtitle>- 2 kgs. de choclillo.</ion-card-subtitle>
+      <ion-card-subtitle>- 2 zanahorías.</ion-card-subtitle>
+      <ion-card-subtitle>- 2 dientes de ajo.</ion-card-subtitle>
+      <ion-card-subtitle>- 1 taza de vino blanco.</ion-card-subtitle>
+      <ion-card-subtitle>- 1 taza de salsa de carne.</ion-card-subtitle>
+      <ion-card-subtitle>- 1 salsa de tomates.</ion-card-subtitle>
+      <ion-card-subtitle>- 1 taza de agua.</ion-card-subtitle>
+      <ion-card-subtitle>- Pimienta.</ion-card-subtitle>
+      <ion-card-subtitle>- Oregano.</ion-card-subtitle>
+      <ion-card-subtitle>***</ion-card-subtitle>
+      <ion-card-subtitle>° PREPARACIÓN:</ion-card-subtitle>
+      <ion-card-subtitle>Sellar la carne en una olla a presión y luego retirarla, luego
+        saltear las verduras. Una vez doradas, agregar nuevamente la carne junto al vino
+        y reducir al 50%. Añadir las salsas y el agua, tapar olla y cocinar durante 60'
+        a fuego medio. Retirar la carne de la olla y desmenuzar, devolver a la olla y
+        revolverlo todo.
+      </ion-card-subtitle>
+      <ion-img src="/assets/img/mechada.jpg"></ion-img>
+    </ion-card-content>
+
+    <ion-item>
+      <ion-icon slot="start" name="book"></ion-icon>
+      <ion-label>Asado a la parrilla</ion-label>
+      <ion-checkbox disabled="true" color="tertiary" [(ngModel)]="asadoalaparrilla" (ionChange)="verAsadoALaParrilla()">
+      </ion-checkbox>
+    </ion-item>
+    <ion-card-content *ngIf="alaparrilla">
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="whitemeats">
+    <ion-card-header>
+      <ion-card-title>Recetas</ion-card-title>
+      <ion-card-subtitle color="primary">Carnes blancas</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      Seleccione la receta que desea ver:
+    </ion-card-content>
+
+    <ion-item>
+      <ion-icon slot="start" name="book"></ion-icon>
+      <ion-label>Pescado Frito</ion-label>
+      <ion-checkbox color="tertiary" [(ngModel)]="pescadofrito" (ionChange)="verPescadoFrito()"></ion-checkbox>
+    </ion-item>
+    <ion-card-content *ngIf="frito">
+      <ion-card-subtitle>° INGREDIENTES:</ion-card-subtitle>
+      <ion-card-subtitle>Batido</ion-card-subtitle>
+      <ion-card-subtitle>- 1 huevo.</ion-card-subtitle>
+      <ion-card-subtitle>- 1/2 taza de harina.</ion-card-subtitle>
+      <ion-card-subtitle>- 1/3 taza de agua.</ion-card-subtitle>
+      <ion-card-subtitle>Pescado:</ion-card-subtitle>
+      <ion-card-subtitle>- Filetillos de pescado.</ion-card-subtitle>
+      <ion-card-subtitle>- 2 tazas de aceite.</ion-card-subtitle>
+      <ion-card-subtitle>***</ion-card-subtitle>
+      <ion-card-subtitle>° PREPARACIÓN:</ion-card-subtitle>
+      <ion-card-subtitle>En un bowl eche el huevo, la harina y el agua y bata formando
+        una mezcla homogénea pero liquida. Luego caliente el aceite a llama alta.
+        Pasé los filetillos por la mezcla y echelos al aceite solo cuando este muy
+        caliente. Saquelo una vez dorada la mezcla.
+      </ion-card-subtitle>
+      <ion-img src="/assets/img/pez.jpg"></ion-img>
+    </ion-card-content>
+
+    <ion-item>
+      <ion-icon slot="start" name="book"></ion-icon>
+      <ion-label>Pollo a la turca</ion-label>
+      <ion-checkbox color="tertiary" [(ngModel)]="polloalaturca" (ionChange)="verPolloALaTurca()"></ion-checkbox>
+    </ion-item>
+    <ion-card-content *ngIf="alaturca">
+      <ion-card-subtitle>° INGREDIENTES:</ion-card-subtitle>
+      <ion-card-subtitle>- 4 presas de pollo (trutro largo, corto o alitas).</ion-card-subtitle>
+      <ion-card-subtitle>- 1 ramo de perejil o cilantro.</ion-card-subtitle>
+      <ion-card-subtitle>- 4 dientes de ajo.</ion-card-subtitle>
+      <ion-card-subtitle>- 3 o 4 tazas de zumo de limón(no sucedaneo).</ion-card-subtitle>
+      <ion-card-subtitle>***</ion-card-subtitle>
+      <ion-card-subtitle>° PREPARACIÓN:</ion-card-subtitle>
+      <ion-card-subtitle>En un bowl eche el perejil y los dientes de ajo picado finamente
+        y agregue el zumo de limón. Revolver todo y echar las presas a marinar
+        (1 a 2 horas). Antes del termino de marinar precaliente el horno a unos 200°c
+        por 10', luego coloque las presas en la bandeja del horno junto con la mezcla.
+        Cocinar aprox. 45'.
+      </ion-card-subtitle>
+      <ion-img src="/assets/img/pollo.jpg"></ion-img>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="vegetables">
+    <ion-card-header>
+      <ion-card-title>Recetas</ion-card-title>
+      <ion-card-subtitle color="primary">Verduras</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      Seleccione la receta que desea ver:
+    </ion-card-content>
+
+    <ion-item>
+      <ion-icon slot="start" name="book"></ion-icon>
+      <ion-label>Zapallo italiano relleno</ion-label>
+      <ion-checkbox color="tertiary" [(ngModel)]="zapalloitalianorelleno" (ionChange)="verZapalloItalianoRelleno()">
+      </ion-checkbox>
+    </ion-item>
+    <ion-card-content *ngIf="relleno">
+      <ion-card-subtitle>° INGREDIENTES:</ion-card-subtitle>
+      <ion-card-subtitle>- 6 zapallitos italianos.</ion-card-subtitle>
+      <ion-card-subtitle>- 1/2 kg. de carne picada.</ion-card-subtitle>
+      <ion-card-subtitle>- 1 1/2 taza de arroz hervido.</ion-card-subtitle>
+      <ion-card-subtitle>- 1 cebolla picada.</ion-card-subtitle>
+      <ion-card-subtitle>- 2 cdas de aceite.</ion-card-subtitle>
+      <ion-card-subtitle>- 1 huevo.</ion-card-subtitle>
+      <ion-card-subtitle>- Condimentos a gusto.</ion-card-subtitle>
+      <ion-card-subtitle>- Salsa blanca.</ion-card-subtitle>
+      <ion-card-subtitle>- Queso rallado.</ion-card-subtitle>
+      <ion-card-subtitle>***</ion-card-subtitle>
+      <ion-card-subtitle>° PREPARACIÓN:</ion-card-subtitle>
+      <ion-card-subtitle>Hervir los zapallitos hasta que esten tiernos pero firmes, enfriar; cortar
+        por la mitad, sacar la pulpa cuidando de no romper la cáscara, salarlos y ponerlos
+        boca abajo sobre una rejilla para que suelte el liquido. Reservar. Picar la pulpa de los
+        zapallitos. En una olla a llama alta echar el aceite, la cebolla, la carne picada y los condimentos, luego
+        agregar la pulpa y dejar hasta que absorva el liquido, agregar el huevo. Retirar del fuego incorporando
+        el arroz. En una bandeja poner los zapallitos y rellenarlos con la mezcla anterior, poner salsa blanca
+        encima y espolvorear queso rallado sobre la salsa. Finalmente poner al horno a gratinar.
+      </ion-card-subtitle>
+      <ion-img src="/assets/img/zapallito.jpg"></ion-img>
+    </ion-card-content>
+
+    <ion-item>
+      <ion-icon slot="start" name="book"></ion-icon>
+      <ion-label>Frito de coliflor</ion-label>
+      <ion-checkbox color="tertiary" [(ngModel)]="fritodecoliflor" (ionChange)="verFritoDeColiflor()"></ion-checkbox>
+    </ion-item>
+    <ion-card-content *ngIf="decoliflor">
+      <ion-card-subtitle>° INGREDIENTES:</ion-card-subtitle>
+      <ion-card-subtitle>Batido</ion-card-subtitle>
+      <ion-card-subtitle>- 1/2 taza de harina.</ion-card-subtitle>
+      <ion-card-subtitle>- 1/3 taza de agua.</ion-card-subtitle>
+      <ion-card-subtitle>- 1 huevo.</ion-card-subtitle>
+      <ion-card-subtitle>Coliflor.</ion-card-subtitle>
+      <ion-card-subtitle>- 1 coliflor.</ion-card-subtitle>
+      <ion-card-subtitle>- 2 tazas de aceite.</ion-card-subtitle>
+      <ion-card-subtitle>***</ion-card-subtitle>
+      <ion-card-subtitle>° PREPARACIÓN:</ion-card-subtitle>
+      <ion-card-subtitle>En un bowl eche el huevo, la harina y el agua y bata formando
+        una mezcla homogénea pero liquida. Troce el coliflor y echelo a cocer entre
+        3' a 5', retirelos de la olla y deje enfriar. Una vez frío caliente el aceite a llama alta,
+        pase los trozos por la mezcla y echelos al aceite solo cuando este muy
+        caliente. Saquelo una vez dorada la mezcla.
+      </ion-card-subtitle>
+      <ion-img src="/assets/img/coliflor.jpg"></ion-img>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-button color="tertiary" size="small" shape="round" (click)="verActionSheet()">¿Estás buscando otra cosa?
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,177 @@
+<ion-header>
+  <ion-toolbar color="medium">
+    <ion-icon slot="start" color="success" name="leaf"></ion-icon>
+    <ion-title color="light">Plato de Entrada</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card>
+    <ion-img src="/assets/img/entrada.jpg"></ion-img>
+    <ion-card-content>
+      Consiste en un plato de comida liviana en poca cantidad
+      antes del plato de fondo. Su objetivo es preparar al
+      consumidor para consumir el plato principal(fondo).
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>
+      <ion-card-header>
+        <ion-card-title>Ver recetas</ion-card-title>
+      </ion-card-header>
+    </ion-card-content>
+    <ion-item>
+      <ion-icon slot="start" color="dark" name="options"></ion-icon>
+      <ion-label>Sopas y Cremas</ion-label>
+      <ion-toggle color="tertiary" [(ngModel)]="sopasycremas" (ionChange)="verSopasYCremas()"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-icon slot="start" color="dark" name="options"></ion-icon>
+      <ion-label>Ensaladas</ion-label>
+      <ion-toggle color="tertiary" [(ngModel)]="ensaladas" (ionChange)="verEnsaladas()"></ion-toggle>
+    </ion-item>
+  </ion-card>
+
+  <ion-card *ngIf="soupsandcreams">
+    <ion-card-header>
+      <ion-card-title>Recetas</ion-card-title>
+      <ion-card-subtitle color="primary">Sopas y Cremas</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      Seleccione la receta que desea ver:
+    </ion-card-content>
+
+    <ion-item>
+      <ion-icon slot="start" name="book"></ion-icon>
+      <ion-label>Sopa de papas</ion-label>
+      <ion-checkbox color="tertiary" [(ngModel)]="sopadepapas" (ionChange)="verSopaDePapas()"></ion-checkbox>
+    </ion-item>
+    <ion-card-content *ngIf="papas">
+      <ion-card-subtitle>° INGREDIENTES:</ion-card-subtitle>
+      <ion-card-subtitle>- 1 presa de pollo.</ion-card-subtitle>
+      <ion-card-subtitle>- 3 o 4 papas grandes.</ion-card-subtitle>
+      <ion-card-subtitle>- 1 lt. de agua.</ion-card-subtitle>
+      <ion-card-subtitle>- Sal a gusto.</ion-card-subtitle>
+      <ion-card-subtitle>***</ion-card-subtitle>
+      <ion-card-subtitle>° PREPARACIÓN:</ion-card-subtitle>
+      <ion-card-subtitle>Ponemos a cocer la presa de pollo en el litro de agua
+        junto con las papas. Una vez que se cuece el pollo se retira de la olla y
+        se dejan las papas hasta que se deshagan. Una vez deshechas las papas se
+        apaga el fuego y se muelen. Añadir sal a gusto.
+      </ion-card-subtitle>
+      <ion-img src="/assets/img/papa.jpg"></ion-img>
+    </ion-card-content>
+
+    <ion-item>
+      <ion-icon slot="start" name="book"></ion-icon>
+      <ion-label>Crema de choclo</ion-label>
+      <ion-checkbox color="tertiary" [(ngModel)]="cremadechoclo" (ionChange)="verCremaDeChoclo()">
+      </ion-checkbox>
+    </ion-item>
+    <ion-card-content *ngIf="dechoclo">
+      <ion-card-subtitle>° INGREDIENTES:</ion-card-subtitle>
+      <ion-card-subtitle>- 1 cucharada de margarina.</ion-card-subtitle>
+      <ion-card-subtitle>- 1/2 cebolla en cubo (brunoise).</ion-card-subtitle>
+      <ion-card-subtitle>- 800 grs. de choclo desgranado.</ion-card-subtitle>
+      <ion-card-subtitle>- 2 tazas de caldo de pollo.</ion-card-subtitle>
+      <ion-card-subtitle>- 3 hojas de albahaca picada.</ion-card-subtitle>
+      <ion-card-subtitle>- 1 tarro de leche evaporada.</ion-card-subtitle>
+      <ion-card-subtitle>***</ion-card-subtitle>
+      <ion-card-subtitle>° PREPARACIÓN:</ion-card-subtitle>
+      <ion-card-subtitle>En una olla echamos la cucharada de margarina y la cebolla,
+        cocinamos hasta freir. Agregamos el caldo de pollo y el choclo y cocinamos sin
+        tapar por 15' a fuego medio, luego enfriamos y molemos con una licuadora. Una vez molido
+        colamos y lo devolvemos a la olla. Añadimos la leche evaporada de a poco revolviendo hasta
+        que la mezcla quede homogénea. Cocinamos a fuego lento por 10' sin que hierva.
+        Para sazonar añadimos albahaca y sal a gusto.
+      </ion-card-subtitle>
+      <ion-img src="/assets/img/choclo.jpg"></ion-img>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="salads">
+    <ion-card-header>
+      <ion-card-title>Recetas</ion-card-title>
+      <ion-card-subtitle color="primary">Ensaladas</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      Seleccione la receta que desea ver:
+    </ion-card-content>
+
+    <ion-item>
+      <ion-icon slot="start" name="book"></ion-icon>
+      <ion-label>Ensalada Caprese</ion-label>
+      <ion-checkbox color="tertiary" [(ngModel)]="ensaladacaprese" (ionChange)="verEnsaladaCaprese()"></ion-checkbox>
+    </ion-item>
+    <ion-card-content *ngIf="caprese">
+      <ion-card-subtitle>° INGREDIENTES:</ion-card-subtitle>
+      <ion-card-subtitle>- 6 a 9 tomates cherry.</ion-card-subtitle>
+      <ion-card-subtitle>- 3 hojas de albahaca fresca.</ion-card-subtitle>
+      <ion-card-subtitle>- 1/2 kg. de queso mozzarella.</ion-card-subtitle>
+      <ion-card-subtitle>- 1 cucharada de aceite de oliva.</ion-card-subtitle>
+      <ion-card-subtitle>- Sal y pimienta.</ion-card-subtitle>
+      <ion-card-subtitle>***</ion-card-subtitle>
+      <ion-card-subtitle>° PREPARACIÓN:</ion-card-subtitle>
+      <ion-card-subtitle>En un bowl colocar el queso mozzarella en rebanadas gruesas, los tomates cherry
+        cortados en gajos sobre el queso, luego picar la albahaca y espolvorearla sobre el tomate, añadir
+        el aceite de oliva en gotitas sobre el tomate y salpimentar a gusto.
+      </ion-card-subtitle>
+      <ion-img src="/assets/img/caprese.jpg"></ion-img>
+    </ion-card-content>
+
+    <ion-item>
+      <ion-icon slot="start" name="book"></ion-icon>
+      <ion-label>Ensalada de palta</ion-label>
+      <ion-checkbox color="tertiary" [(ngModel)]="ensaladadepalta" (ionChange)="verEnsaladaDePalta()"></ion-checkbox>
+    </ion-item>
+    <ion-card-content *ngIf="palta">
+      <ion-card-subtitle>° INGREDIENTES:</ion-card-subtitle>
+      <ion-card-subtitle>- 1 palta.</ion-card-subtitle>
+      <ion-card-subtitle>- 1 tomate.</ion-card-subtitle>
+      <ion-card-subtitle>- 1 bola de queso mozzarella.</ion-card-subtitle>
+      <ion-card-subtitle>- 3 a 5 hojas de albahaca fresca.</ion-card-subtitle>
+      <ion-card-subtitle>- 1/2 limón.</ion-card-subtitle>
+      <ion-card-subtitle>- 1 cucharada de aceite de oliva.</ion-card-subtitle>
+      <ion-card-subtitle>- Sal y pimienta.</ion-card-subtitle>
+      <ion-card-subtitle>***</ion-card-subtitle>
+      <ion-card-subtitle>° PREPARACIÓN:</ion-card-subtitle>
+      <ion-card-subtitle>En un plato bajo colocar la palta en gajos y agregar el zumo de limón, luego cortar en
+        trozos grandes el queso y lo colocamos encima de la palta, sobre eso picar el tomate en cubos grandes,
+        añadir la albahaca y la cucharada de aceite. Salpimentar.
+      </ion-card-subtitle>
+      <ion-img src="/assets/img/palta.jpg"></ion-img>
+    </ion-card-content>
+
+    <ion-item>
+      <ion-icon slot="start" name="book"></ion-icon>
+      <ion-label>Ensalada Cesar de pollo</ion-label>
+      <ion-checkbox color="tertiary" [(ngModel)]="ensaladacesar" (ionChange)="verEnsaladaCesar()"></ion-checkbox>
+    </ion-item>
+    <ion-card-content *ngIf="cesar">
+      <ion-card-subtitle>° INGREDIENTES:</ion-card-subtitle>
+      <ion-card-subtitle>- 1 pechuga de pollo cocido y desmenuzado.</ion-card-subtitle>
+      <ion-card-subtitle>- 250 grs. de bacon picado.</ion-card-subtitle>
+      <ion-card-subtitle>- 1 lechuga.</ion-card-subtitle>
+      <ion-card-subtitle>- 1 bolsa de crouton.</ion-card-subtitle>
+      <ion-card-subtitle>- 1/2 taza de mayonesa.</ion-card-subtitle>
+      <ion-card-subtitle>- 1 cucharada de aceite balsamico.</ion-card-subtitle>
+      <ion-card-subtitle>- 1 taza de queso parmesano rallado.</ion-card-subtitle>
+      <ion-card-subtitle>- 1 cucharada de aceite de oliva.</ion-card-subtitle>
+      <ion-card-subtitle>***</ion-card-subtitle>
+      <ion-card-subtitle>° PREPARACIÓN:</ion-card-subtitle>
+      <ion-card-subtitle>En un bowl se coloca la lechuga picada, el pollo, el bacon, el crouton, el queso,
+        agregamos las cucharadas de aceite (ambas) y mezclamos todo con la mayonesa. Añadir sal a gusto.
+      </ion-card-subtitle>
+      <ion-img src="/assets/img/cesar.jpg"></ion-img>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-button color="tertiary" size="small" shape="round" (click)="verActionSheet()">¿Estás buscando otra cosa?
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,183 @@
+<ion-header>
+  <ion-toolbar color="medium">
+    <ion-icon slot="start" color="secondary" name="ice-cream"></ion-icon>
+    <ion-title color="light">Postre</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-img src="/assets/img/postre.jpg"></ion-img>
+    <ion-card-content>
+      Es el plato de sabor dulce o agridulce que se consume al
+      final del plato de fondo. Cuando se habla de postres se
+      entiende de alguna preparación dulce, sean tartas,
+      pasteles, helados, bombones, etc.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>
+      <ion-card-header>
+        <ion-card-title>Ver recetas</ion-card-title>
+      </ion-card-header>
+    </ion-card-content>
+    <ion-item>
+      <ion-icon slot="start" color="dark" name="options"></ion-icon>
+      <ion-label>Dulces</ion-label>
+      <ion-toggle color="tertiary" [(ngModel)]="dulces" (ionChange)="verDulces()"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-icon slot="start" color="dark" name="options"></ion-icon>
+      <ion-label>Agridulces</ion-label>
+      <ion-toggle color="tertiary" [(ngModel)]="agridulces" (ionChange)="verAgridulces()"></ion-toggle>
+    </ion-item>
+  </ion-card>
+
+  <ion-card *ngIf="sweets">
+    <ion-card-header>
+      <ion-card-title>Recetas</ion-card-title>
+      <ion-card-subtitle color="primary">Dulces</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      Seleccione la receta que desea ver:
+    </ion-card-content>
+
+    <ion-item>
+      <ion-icon slot="start" name="book"></ion-icon>
+      <ion-label>Brownie</ion-label>
+      <ion-checkbox color="tertiary" [(ngModel)]="brownie" (ionChange)="verBrownie()"></ion-checkbox>
+    </ion-item>
+    <ion-card-content *ngIf="brown">
+      <ion-card-subtitle>° INGREDIENTES:</ion-card-subtitle>
+      <ion-card-subtitle>- 200 grs. de chocolate Fondant.</ion-card-subtitle>
+      <ion-card-subtitle>- 80 grs. de harina.</ion-card-subtitle>
+      <ion-card-subtitle>- 9 cucharadas de azúcar.</ion-card-subtitle>
+      <ion-card-subtitle>- 90 grs. de mantequilla o margarina.</ion-card-subtitle>
+      <ion-card-subtitle>- 50 grs. de nueces.</ion-card-subtitle>
+      <ion-card-subtitle>- 1 cucharada de cafe soluble (3 grs.)</ion-card-subtitle>
+      <ion-card-subtitle>***</ion-card-subtitle>
+      <ion-card-subtitle>° PREPARACIÓN:</ion-card-subtitle>
+      <ion-card-subtitle>Fundimos el chocolate con la mantequilla, añadimos el cafe,
+        mezaclamos y reservamos. Separar las yemas de las claras y batimos las claras
+        a punto de nieve. En un bowl batimos las yemas con el azúcar, incorporamos la
+        mezcla de chocolate, mezclamos. Añadimos las nueces, la harina y mezclamos. Luego
+        añadimos las claras mezclando con cuidado. Verter todo en un molde rectangular
+        bien engrasado y horneamos a 180°, precalentado con calor circular unos 25' sin pasarse
+        ya que debe quedar jugoso en su interior.
+      </ion-card-subtitle>
+      <ion-img src="/assets/img/brownie.jpg"></ion-img>
+    </ion-card-content>
+
+    <ion-item>
+      <ion-icon slot="start" name="book"></ion-icon>
+      <ion-label>Paletas de bombón</ion-label>
+      <ion-checkbox color="tertiary" [(ngModel)]="paletasdebombon" (ionChange)="verPaletasDeBombon()">
+      </ion-checkbox>
+    </ion-item>
+    <ion-card-content *ngIf="debombon">
+      <ion-card-subtitle>° INGREDIENTES:</ion-card-subtitle>
+      <ion-card-subtitle>- Bombones.</ion-card-subtitle>
+      <ion-card-subtitle>- Chocolate para derretir.</ion-card-subtitle>
+      <ion-card-subtitle>- Granillo de colores.</ion-card-subtitle>
+      <ion-card-subtitle>- Palitos de brocheta.</ion-card-subtitle>
+      <ion-card-subtitle>***</ion-card-subtitle>
+      <ion-card-subtitle>° PREPARACIÓN:</ion-card-subtitle>
+      <ion-card-subtitle>Derrite el chocolate, remoja los bombones y espolvorea
+        el granillo sobre ellos. Deja que el chocolate se endurezca para tener
+        una mejor presentación.
+      </ion-card-subtitle>
+      <ion-img src="/assets/img/bombon.jpg"></ion-img>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="bittersweets">
+    <ion-card-header>
+      <ion-card-title>Recetas</ion-card-title>
+      <ion-card-subtitle color="primary">Agridulces</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      Seleccione la receta que desea ver:
+    </ion-card-content>
+
+    <ion-item>
+      <ion-icon slot="start" name="book"></ion-icon>
+      <ion-label>Peras al vino tinto</ion-label>
+      <ion-checkbox color="tertiary" [(ngModel)]="perasalvino" (ionChange)="verPerasAlVino()"></ion-checkbox>
+    </ion-item>
+    <ion-card-content *ngIf="alvino">
+      <ion-card-subtitle>° INGREDIENTES:</ion-card-subtitle>
+      <ion-card-subtitle>- 4 peras peladas, maduras pero firmes.</ion-card-subtitle>
+      <ion-card-subtitle>- 1/2 lt. de vino tinto.</ion-card-subtitle>
+      <ion-card-subtitle>- 1 rama de canela.</ion-card-subtitle>
+      <ion-card-subtitle>- 3 a 4 estrellas de anís.</ion-card-subtitle>
+      <ion-card-subtitle>- La piel de un limón.</ion-card-subtitle>
+      <ion-card-subtitle>- 4 cucharadas de azúcar.</ion-card-subtitle>
+      <ion-card-subtitle>- 3 clavos de olor.</ion-card-subtitle>
+      <ion-card-subtitle>***</ion-card-subtitle>
+      <ion-card-subtitle>° PREPARACIÓN:</ion-card-subtitle>
+      <ion-card-subtitle>En una olla (amplia) colocar el vino, el azúcar, el anís, los clavos de olor,
+        la canela y la piel de limón. Calentamos y llevamos a ebullición para que se disuelva el azúcar,
+        luego incorporamos las peras con la punta hacia arriba y dejamos cocer durante 15' a fuego
+        medio, una vez que estén tiernas y bien coloreadas, las sacamos. Dejamos el vino con el resto de
+        los ingredientes en el fuego a unos 10' o 15' más para que reduzca (quedar en almíbar sin caramelizarse).
+        Finalmente se ponen las peras en una bandeja o plato y se les rocía el almíbar encima y podemos acompañarlo
+        con helado de vainilla.
+
+      </ion-card-subtitle>
+      <ion-img src="/assets/img/peras.jpg"></ion-img>
+    </ion-card-content>
+
+    <ion-item>
+      <ion-icon slot="start" name="book"></ion-icon>
+      <ion-label>Pie de limón</ion-label>
+      <ion-checkbox color="tertiary" [(ngModel)]="piedelimon" (ionChange)="verPieDeLimon()">
+      </ion-checkbox>
+    </ion-item>
+    <ion-card-content *ngIf="delimon">
+      <ion-card-subtitle>° INGREDIENTES:</ion-card-subtitle>
+      <ion-card-subtitle>Para la base.</ion-card-subtitle>
+      <ion-card-subtitle>- 1 limón.</ion-card-subtitle>
+      <ion-card-subtitle>- 1 taza de harina.</ion-card-subtitle>
+      <ion-card-subtitle>- 100 grs. de margarina o manteca.</ion-card-subtitle>
+      <ion-card-subtitle>- 2 huevos.</ion-card-subtitle>
+      <ion-card-subtitle>Para el relleno.</ion-card-subtitle>
+      <ion-card-subtitle>- 1 taza de agua.</ion-card-subtitle>
+      <ion-card-subtitle>- 100 grs. de azúcar.</ion-card-subtitle>
+      <ion-card-subtitle>- 1 cucharada de margarina o manteca.</ion-card-subtitle>
+      <ion-card-subtitle>- 1 limón.</ion-card-subtitle>
+      <ion-card-subtitle>- 2 cucharadas de maicena.</ion-card-subtitle>
+      <ion-card-subtitle>Para el merengue.</ion-card-subtitle>
+      <ion-card-subtitle>- 1 taza de azúcar.</ion-card-subtitle>
+      <ion-card-subtitle>- 1/2 taza de azúcar.</ion-card-subtitle>
+      <ion-card-subtitle>- Claras.</ion-card-subtitle>
+      <ion-card-subtitle>***</ion-card-subtitle>
+      <ion-card-subtitle>° PREPARACIÓN:</ion-card-subtitle>
+      <ion-card-subtitle>Colocar la harina en un bowl y rallar la mitad de un limón, añadir el azúcar
+        y mezclar, agregamos la margarina, 1 huevo entero y la yema de otro (conservar la clara)
+        y amasar hasta lograr la masa, una vez lista colocarla en la tartera y cocinar al
+        horno por 10'. Una vez lista comenzamos con el relleno. Usamos una olla, un tamizador y una
+        cuchara. Comenzar a rallar el resto del limón y exprimir su jugo, agregar el azúcar
+        y las yemas de los dos huevos (conservar la clara), revolver esta mezcla, agregar el agua
+        y poner a calentar. Una vez caliente colocar la manteca, al derretirse, tamizar la maicena e ir
+        mezclando para que no se hagan grumos. Espesar. Una vez lista colocar el relleno en
+        la base y dejar enfriar. Para el merengue colocar en una sartén el azúcar, el agua y
+        poner a hervir hasta que se le vayan las burbujas grandes. Cuando vemos que se comienzan
+        a formar las burbujas, en un bowl verter las claras y comenzar a batir hasta lograr el merengue a punto,
+        sin dejar de batir colocarle de a poco el almíbar hasta que forme un merengue
+        brillante y durito. Dejar enfriar unos 10 minutos. Una vez listo el merengue colocar encima del relleno como
+        deseé.
+      </ion-card-subtitle>
+      <ion-img src="/assets/img/limon.jpg"></ion-img>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-button color="tertiary" size="small" shape="round" (click)="verActionSheet()">¿Estás buscando otra cosa?
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
